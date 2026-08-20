@@ -1,0 +1,40 @@
+# Ignore logs, temporary files, and local configurations
+
+# Logs
+
+\*.log  
+logs/
+
+# Temporary files
+
+\*.tmp  
+\*.swp  
+\*\~
+
+# Local configurations (if any)
+
+\*.config  
+\*.local
+
+# Python
+
+**pycache**/  
+\*.py\[cod\]  
+\*$py.class
+
+# Termux-specific
+
+/data/data/com.termux/  
+/storage/emulated/0/
+
+# IDE/Editor files
+
+.idea/  
+.vscode/  
+\*.sublime-workspace  
+\*.sublime-project
+
+# OS metadata
+
+.DS\_Store  
+Thumbs.db

@@ -1,0 +1,89 @@
+# Termux Utilities - Cron Examples
+
+# Copy and paste these into your crontab with: crontab -e
+
+# =============================================================================
+# SYSTEM SCRIPTS
+# =============================================================================
+
+# Run full system checks every hour
+0 \* \* \* \* \~/termux-utilities/system/startup\_monitor.sh
+
+# Run system checks with package updates daily at 3 AM
+0 3 \* \* \* \~/termux-utilities/system/startup\_monitor.sh --update
+
+# Monitor system metrics every 6 hours
+0 \*/6 \* \* \* \~/termux-utilities/system/system\_monitor.sh
+
+# Generate boot report at startup (requires Termux:Boot)
+@reboot \~/termux-utilities/system/termux\_boot\_report.sh
+
+# Check WiFi health every 30 minutes (only runs 8 AM - 11 PM)
+\*/30 \* \* \* \* \~/termux-utilities/system/wifi\_health.sh
+
+# =============================================================================
+# BATTERY SCRIPTS
+# =============================================================================
+
+# Check battery every 15 minutes (alerts at 15%, 30%, 50%)
+\*/15 \* \* \* \* \~/termux-utilities/battery/battery\_check.sh
+
+# =============================================================================
+# STORAGE SCRIPTS
+# =============================================================================
+
+# Clean logs older than 7 days every Sunday at 3 AM
+0 3 \* \* 0 \~/termux-utilities/storage/clean\_logs.sh
+
+# Delete APKs older than 30 days on the 1st of every month at 4 AM
+0 4 1 \* \* \~/termux-utilities/storage/delete\_apk.sh
+
+# Organize downloads daily at 2 AM
+0 2 \* \* \* \~/termux-utilities/storage/organize\_downloads.sh
+
+# =============================================================================
+# WEATHER SCRIPTS
+# =============================================================================
+
+# Get weather updates daily at 7:30 AM
+30 7 \* \* \* \~/termux-utilities/weather/weather\_notify.sh
+
+# =============================================================================
+# CUSTOMIZATION TIPS
+# =============================================================================
+
+# 1. To edit your crontab:
+# crontab -e
+
+# 2. To list your current cron jobs:
+# crontab -l
+
+# 3. To remove all cron jobs:
+# crontab -r
+
+# 4. Cron syntax:
+
+# \* \* \* \* \* command
+# │ │ │ │ │
+# │ │ │ │ └── Day of week (0 - 6) (0 = Sunday)
+# │ │ │ └──── Month (1 - 12)
+# │ │ └────── Day of month (1 - 31)
+# │ └──────── Hour (0 - 23)
+# └────────── Minute (0 - 59)
+
+# 5. Common schedules:
+
+# @reboot       Run at startup
+# @hourly       Run every hour
+# @daily        Run once a day at midnight
+# @weekly       Run once a week at midnight on Sunday
+# \*/5 \* \* \* \*   Run every 5 minutes
+
+# =============================================================================
+# NOTES
+# =============================================================================
+# - All paths assume scripts are in \~/termux-utilities/
+# - Adjust paths if you cloned the repo to a different location
+# - Test scripts manually before adding to cron
+# - Use absolute paths (starting with \~/) for reliability
+# - Comments (lines starting with #) are ignored by cron

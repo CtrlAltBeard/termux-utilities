@@ -6,6 +6,9 @@ Automate tasks, monitor your system, and supercharge your Termux experience with
 
 ---
 
+![GitHub stars](https://img.shields.io/github/stars/CtrlAltBeard/termux-utilities?style=social)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 ## **📂 Repository Structure**
 
 This repository is organized into **categories** for easy navigation:

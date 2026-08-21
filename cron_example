@@ -72,7 +72,7 @@
 # └────────── Minute (0 - 59)
 
 # 5. Common schedules:
-
+=======
 # @reboot       Run at startup
 # @hourly       Run every hour
 # @daily        Run once a day at midnight

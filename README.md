@@ -16,6 +16,7 @@ termux-utilities/
 ├── battery/         # Battery monitoring and alerts
 ├── storage/         # File organization, cleanup, and APK management
 ├── weather/         # Weather data and notifications
+├── fun/                # Fun and whimsical scripts
 ├── LICENSE          # MIT License
 └── README.md        # This file
 ```
@@ -31,7 +32,7 @@ termux-utilities/
 | `battery/` | Battery monitoring and alerts  | `battery_check.sh`                                                                                        |
 | `storage/` | File organization and cleanup  | `clean_logs.sh`, `delete_apk.sh`, `organize_downloads.sh`                                                 |
 | `weather/` | Weather data and notifications | `weather.py`, `weather_notify.sh`                                                                         |
-
+  | `fun/`       | Fun and whimsical scripts             | `random_cowfortune.sh`                                                                             |
 
 ---
 
@@ -109,6 +110,9 @@ Add entries like:
 
 - **`weather.py`**: Fetch and display detailed weather data (using Open-Meteo API).
 - **`weather_notify.sh`**: Get weather notifications with customizable city settings.
+
+### **🎪 Fun Scripts**
+- **`random_cowfortune.sh`**: Random fortune quotes delivered by random cowsay animals. Perfect for startup surprises!
 
 ---
 
